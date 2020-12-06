@@ -1,0 +1,40 @@
+.header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(14, 63, 169);
+}
+
+
+
+.headerTitle{
+    color: rgb(248, 169, 19);
+    font-weight: 900;
+}
+
+
+.active {
+    background-color: rgb(0, 46, 83);
+}
+
+.header a {
+    all: unset;
+    color: white;
+    padding: 1em;
+    transition: all 0.5s;
+}
+
+.header a:hover {
+    color: black;
+    cursor: pointer;
+    background-color: rgb(248, 169, 19) ;
+    border-radius: 25%;
+}
+
+.navigate{
+    display: flex;
+    justify-content: flex-end;
+    
+
+}
