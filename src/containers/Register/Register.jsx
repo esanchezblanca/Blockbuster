@@ -14,15 +14,11 @@ const Register = () => {
       const form = event.target;
       const register = {
         name: form.name.value,
-        lastName: form.lastName.value,
         mail: form.mail.value,
-        password: form.password.value,
-        phone: form.phone.value,
-        birthDay: form.birthDay.value,
-        DNI: form.DNI.value
+        password: form.mail.password
 
       }
-      await axios.post('http://localhost:3200/customers/register', register).then(res => {
+      await axios.post('http://localhost:5000/users', register).then(res => {
         notification.success({ message: 'Registered'})
         history.push('/login')
       })
@@ -41,7 +37,6 @@ const Register = () => {
         <form className="divRegister" onSubmit={handleSubmit}> 
             <div className="divLeft">
             <input className="loginInput" type="text" name="name" placeholder="Nombre"/>
-            <input className="loginInput" type="text" name="lastName" placeholder="Apellidos"/>
             <input className="loginInput" type="email" name="mail" placeholder="Email"/>
             <input className="loginInput" type="password" name="password" placeholder="Contraseña"/>
             <button className="registerButton" type="submit">Enviar</button>

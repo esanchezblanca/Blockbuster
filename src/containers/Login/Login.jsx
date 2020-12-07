@@ -31,11 +31,12 @@ const Login = (props) => {
       //Se hace la petición asíncrona al back
       await axios.post('http://localhost:5000/users/login', login)
         .then(res => {
-          console.log(res);
-          // localStorage.setItem('user',res.data.user.token)
-          // localStorage.setItem('username',res.data.user.name)
-          notification.success({ message: 'Logged in' })
-          history.push('/appointment')
+          if (res.data.status == 200) {
+            notification.success({ message: 'Logged in' })
+            history.push('/home')
+          } else if (res.data.status == 403) {
+            notification.error({ message: 'Cannot log in', description: 'Check your credentials' })
+          }
         }).catch(err => {
           console.error(err)
           notification.error({ message: 'Cannot log in', description: 'Check your credentials' })
