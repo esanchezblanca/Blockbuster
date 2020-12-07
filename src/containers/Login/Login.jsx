@@ -23,6 +23,8 @@ const Login = (props) => {
         .then(res => {
           if (res.data.status == 200) {
             notification.success({ message: 'Logged in' })
+            console.log(res.data.mail)
+            localStorage.setItem('mail', res.data.mail);
             history.push('/home')
           } else if (res.data.status == 403) {
             notification.error({ message: 'Cannot log in', description: 'Check your credentials' })
