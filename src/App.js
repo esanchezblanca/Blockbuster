@@ -5,6 +5,7 @@ import Header from './components/Header/Header';
 import Login from './containers/Login/Login';
 import Home from './containers/Home/Home';
 import Register from './containers/Register/Register';
+import Detalle from './components/Detalle/Detalle';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/home" component={Home} exact />
           <Route path="/login" component={Login} exact />
           <Route path="/register" component={Register} exact />
+          <Route path="/detalle" component={Detalle} exact />
 
 
           <Link to="/home" component={Home} exact></Link>

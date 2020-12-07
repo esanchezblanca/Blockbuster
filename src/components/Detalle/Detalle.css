@@ -1,0 +1,18 @@
+.todaInfo{
+    display: flex;
+    flex-direction: row;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 5%;
+}
+
+.fotoDescripcion{
+    display: flex;
+    flex-direction: row;
+}
+
+.plot{
+    display: flex;
+    margin-top: 15%;
+    margin-left: 3em;
+}

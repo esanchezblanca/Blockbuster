@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import css from './Home.css'
 
 
 class Home extends Component {
@@ -26,20 +27,28 @@ class Home extends Component {
     }
 
 
+    callDetail(movie) {
+        this.props.history.push('/detalle');
+        localStorage.setItem('movieDetail', JSON.stringify(movie));
+    }
+
     render() {
         return (
+            <div className="globalDiv">
 
-            <div className="grid">
-                {
-                    this.state.movies.map(
-                        item =>
-                            <div>
-                                <img src={item.image} alt={item.image} />
-                                <p>Title: {item.title} </p>
-                                {/* <button className="detailed" onClick={() => this.callDetail(item)}> Detailed view </button> */}
+                <div className="grid">
+                    {
+                        this.state.movies.map(
+                            item => <div className="divFilms">
+                                <div>
+                                    <img className="poster" src={item.image} alt={item.image} />
+                                    <p>Title: {item.title} </p>
+                                    <button className="detailed" onClick={() => this.callDetail(item)}> Detalle </button>
+                                </div>
                             </div>
-                    )
-                }
+                        )
+                    }
+                </div>
             </div>
         )
     }
