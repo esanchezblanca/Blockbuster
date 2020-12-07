@@ -8,20 +8,19 @@ class Home extends Component {
 
         this.state = {
             movies: [],
-            page: 1
         }
     }
 
-    componentDidMount(){
+    componentDidMount() {
         this.getMovieList();
     }
 
-    getMovieList(page) {
-        axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=479c2920a277283ba2e63633bbcc98d6&page=${page}`)
-        // https://videoclub-mongo.herokuapp.com/
+    getMovieList() {
+        axios.get(`http://localhost:5000/movies`)
+
             .then(api => {
                 console.log(api)
-                this.setState({ movies: api.data.results })
+                this.setState({ movies: api.data })
             })
             .catch(err => console.log(err));
     }
@@ -29,11 +28,21 @@ class Home extends Component {
 
     render() {
         return (
-            <div>
-                Hola
+
+            <div className="grid">
+                {
+                    this.state.movies.map(
+                        item =>
+                            <div>
+                                <img src={item.image} alt={item.image} />
+                                <p>Title: {item.title} </p>
+                                {/* <button className="detailed" onClick={() => this.callDetail(item)}> Detailed view </button> */}
+                            </div>
+                    )
+                }
             </div>
         )
     }
 }
 
-export default Home
+export default Home;
