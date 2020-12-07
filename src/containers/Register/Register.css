@@ -1,0 +1,44 @@
+.divRegister{
+    margin-top: 2em;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: space-between;
+    /* min-height: 40vh;  */
+    align-items: center;
+    /* border:2px solid gray; */
+}
+
+
+.loginInput{
+    /* all: unset; */
+    padding: 1em;
+    width: 30em;
+    border-radius: 0.5em;
+    background-color: rgb(212, 209, 209);
+    display:flex;
+    align-content: space-around;
+    margin-bottom: 3em;
+}
+
+.register{
+    display: flex;
+    cursor: pointer;
+    align-content: space-around;
+    margin-bottom: 2em;
+}
+
+.register:hover{
+        color:blue;
+}
+
+.registerButton{
+    all: unset;
+    cursor: pointer;
+    border-radius: 0.7em;
+    padding: 1em;
+    background-color:rgb(248, 169, 19);
+}

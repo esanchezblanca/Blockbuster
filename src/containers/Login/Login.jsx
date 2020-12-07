@@ -1,5 +1,5 @@
 import React from 'react';
-import "./login.css";
+import "./Login.css";
 import axios from 'axios';
 import { notification } from 'antd';
 import { useHistory } from 'react-router-dom';
@@ -29,10 +29,11 @@ const Login = (props) => {
         password: form.password.value,
       }
       //Se hace la petición asíncrona al back
-      await axios.post('http://localhost:3200/customers/login', login)
+      await axios.post('http://localhost:5000/users/login', login)
         .then(res => {
-          localStorage.setItem('user',res.data.user.id)
-          localStorage.setItem('username',res.data.user.name)
+          console.log(res);
+          // localStorage.setItem('user',res.data.user.token)
+          // localStorage.setItem('username',res.data.user.name)
           notification.success({ message: 'Logged in' })
           history.push('/appointment')
         }).catch(err => {
