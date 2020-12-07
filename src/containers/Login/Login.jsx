@@ -7,16 +7,6 @@ import 'antd/dist/antd.css';
 import { useEffect, useState } from 'react';
 
 //Creamos la plantilla de las notificaciones que aparecerán en el login
-const openNotification = () => {
-  notification.open({
-    message: 'Título',
-    description:
-      'Notificación',
-    onClick: () => {
-      console.log('Notification Clicked!');
-    },
-  });
-};
 
 const Login = (props) => {
   const history = useHistory();
