@@ -26,13 +26,11 @@ class Detalle extends Component {
     }
 
     async rentMovie() {
-        console.log("entro");
         try {
             const order = {
                 movieId: this.state.peliculaDetallada._id,
                 mail: localStorage.getItem('mail'),
             }
-            console.log(order)
             await axios.post('http://localhost:5000/order', order)
                 .then(res => {
                     console.log("entro en then")
