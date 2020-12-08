@@ -1,70 +1,28 @@
-# Getting Started with Create React App
+# Blockbuster :movie_camera:
+Proyecto que recrea la parte frontend con react de una app de películas. Imitación del famoso videoclub Blockbuster de los años 90.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Logo](blockbusterLogo.jpg)
 
-## Available Scripts
+### Puesta en marcha :wrench:
+Este proyecto funciona con un backend realizado en Mongo que se puede encontrar en este enlace:
+https://github.com/esanchezblanca/VideoclubBackend.git
 
-In the project directory, you can run:
+Una vez descargado el backend, lo abrimos e iniciamos un nuevo terminal. Iniciamos nodemon dentro de la carpeta videoclubbackend con nodemon server.js.
 
-### `npm start`
+Después arrancaremos el frontend con npm start y estará listo para usarse.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Descripción y funcionamiento :hammer:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+La app se abrirá por una página principal llamada Home con la lista de películas.
 
-### `npm test`
+Siempre tendremos disponible arriba una barra de navegación con botones para dirigirnos a home, register, login y perfil.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Para poder alquilar las películas debemos hacer login con un usuario registrado. Proporcionamos uno de prueba por si no quisiera registrarse con uno nuevo:
+        Usuario: pepe@gmail.com
+        Password: contrasena
 
-### `npm run build`
+Una vez hecho el login, el usuario podrá ver las películas en detalle y reservarlas dándole al botón "Alquilar".
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Licencia :page_with_curl:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Este proyecto ha sido realizado por Elena Sánchez de la Blanca y está sujeto a la licencia MIT. Para obtener más información, por favor diríjase al archivo LICENSE que encontrará adjunto.
