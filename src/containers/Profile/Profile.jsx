@@ -10,7 +10,8 @@ class Profile extends Component {
         super(props)
 
         this.state = {
-            detalleUser: {}
+            detalleUser: {},
+            detalleAlquiler: {}
        }
     }
 
@@ -23,7 +24,7 @@ class Profile extends Component {
             console.log(userData)
             await axios.get('http://localhost:5000/singleUser', userData)
                 .then(res => {
-                    console.log(res.data.userData)
+                    console.log(res.data)
                     if (res.data.status == 200) {
                         this.setState({ detalleUser: res.data.userData })
                     }
@@ -36,6 +37,38 @@ class Profile extends Component {
         }
     }
 
+    async getRentData() {
+        try {
+            const userData = {
+                mail: localStorage.getItem('mail'),
+            }
+            console.log(userData)
+            await axios.get('http://localhost:5000/order', userData)
+                .then(res => {
+                    console.log(res.data)
+                    if (res.data.status == 200) {
+                        this.setState({ detalleAlquiler: res.data.rentData })
+                    }
+                }).catch(err => {
+                    console.log(err)
+                    notification.error({ message: 'Error', description: 'Ha sido imposible cargar los datos' })
+                })
+        } catch (err) {
+            console.log(err)
+        }
+    }
+
+    showRentData(){
+        return (
+            <div className="datosAlquiler">
+                
+            <div> Id: {this.state.detalleAlquiler.movieId}</div>
+            <div> Devolución: {this.state.detalleAlquiler.returnDate}</div>
+
+            </div>
+        )
+    }
+
     showUserData() {
             return (
                 <div className="datosUsuario">
@@ -44,11 +77,13 @@ class Profile extends Component {
                 <div> Mail: {this.state.detalleUser.mail}</div>
 
                 </div>
+
             )
         }
     
     componentDidMount(){
         this.getUserData();
+        this.getRentData();
         }
 
     render() {
@@ -56,6 +91,7 @@ class Profile extends Component {
             <div>
                 <div className="datosUsuario">
                     {this.showUserData()}
+                    {this.showRentData()}
                 </div>
             </div>
         )
