@@ -1,7 +1,7 @@
 # Blockbuster :movie_camera:
 Proyecto que recrea la parte frontend con react de una app de películas. Imitación del famoso videoclub Blockbuster de los años 90.
 
-![Logo]('./img/blockbusterLogo.jpg')
+![Logo](blockbusterLogo.jpg)
 
 ### Puesta en marcha :wrench:
 Este proyecto funciona con un backend realizado en Mongo que se puede encontrar en este enlace:
