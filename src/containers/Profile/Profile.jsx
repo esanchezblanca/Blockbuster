@@ -8,14 +8,20 @@ class Profile extends Component {
         super(props)
 
         this.state = {
-            
+            detalleUser: {},
+            detalleAlquiler: {}
         }
     }
 
     render() {
         return (
             <div>
-                datos usuario
+                <div className="datosUsuario">
+                    Datos usuario
+                </div>
+                <div className="datosAlquiler">
+                    Alquiler
+                </div>
             </div>
         )
     }

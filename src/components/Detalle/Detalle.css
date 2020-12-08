@@ -1,18 +1,33 @@
-.todaInfo{
+.divGral{
     display: flex;
     flex-direction: row;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 5em;
     margin-top: 5%;
 }
 
 .fotoDescripcion{
     display: flex;
     flex-direction: row;
+    width: 400;
+    height: 600;
+}
+
+.titulo{
+font-size: large;
+font-weight: bold;
+margin-left: 20%;
 }
 
 .plot{
     display: flex;
-    margin-top: 15%;
+    margin-top: 20%;
     margin-left: 3em;
+    font-size: large;
+    
+}
+
+.btnDetalle{
+    display: flex;
+    margin-top: 20%;
+    justify-content: space-around;
 }
